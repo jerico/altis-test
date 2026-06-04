@@ -1,0 +1,42 @@
+{
+    "name": "altis/skeleton",
+    "description": "A base Altis project to get started with",
+    "type": "project",
+    "require": {
+        "altis/altis": "^26.0.0"
+    },
+    "require-dev": {
+        "altis/local-server": "^26.0.0"
+    },
+    "authors": [
+        {
+            "name": "Human Made",
+            "email": "hello@humanmade.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "installer-paths": {
+            "content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.3",
+            "ext-mbstring": "8.3"
+        },
+        "allow-plugins": {
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true,
+            "altis/*": true
+        }
+    }
+}
